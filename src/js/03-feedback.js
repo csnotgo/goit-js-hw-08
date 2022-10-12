@@ -26,7 +26,9 @@ function populateInput(e) {
   const savedMessage = localStorage.getItem(key);
   const messageValue = JSON.parse(savedMessage);
   if (savedMessage) {
-    form.elements.email.value = messageValue.email || '';
-    form.elements.message.value = messageValue.message || '';
+    form.elements.email.value = messageValue.email;
+    formData.email = messageValue.email;
+    form.elements.message.value = messageValue.message;
+    formData.message = messageValue.message;
   }
 }
