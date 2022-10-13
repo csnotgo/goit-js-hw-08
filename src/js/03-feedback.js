@@ -3,7 +3,7 @@ import trottle from 'lodash.throttle';
 const form = document.querySelector('form');
 
 const key = 'feedback-form-state';
-const formData = {};
+const formData = { email: '', message: '' };
 
 form.addEventListener('input', trottle(onFormInput, 500));
 form.addEventListener('submit', onFormSubmit);
